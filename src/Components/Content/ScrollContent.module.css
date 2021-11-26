@@ -1,0 +1,21 @@
+.Wrapper{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 120px;
+    bottom: 0;
+    overflow: auto;
+}
+.Wrapper::-webkit-scrollbar{
+    display: none;
+}
+.Wrapper {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+@media (max-width: 500px) {
+    .Wrapper {
+        top: 95px;
+    }
+}

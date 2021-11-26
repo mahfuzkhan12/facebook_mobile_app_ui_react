@@ -1,0 +1,31 @@
+
+.wrapperCell{
+  display: flex;
+  margin-bottom: 30px;
+  padding: 0 10px;
+  flex-wrap: wrap;
+}
+
+@keyframes placeHolderShimmer{
+  0%{
+      background-position: -468px 0
+  }
+  100%{
+      background-position: 468px 0
+  }
+}
+
+.image {
+  width: 31.3%;
+  animation-duration: 2s;
+  animation-fill-mode: revert;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: #F6F6F6;
+  background: linear-gradient(to right, #E7E7E7 8%, #E5E5E55E 18%, #EAE9E9 33%);
+  background-size: 800px 104px;
+  height: 120px;
+  position: relative;
+  margin: 1%;
+}

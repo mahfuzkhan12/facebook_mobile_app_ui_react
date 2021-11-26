@@ -1,0 +1,195 @@
+
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+.m_wrapper{
+    position: absolute;
+    background-color: rgb(243, 243, 244);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+    -moz-box-align: center;
+    align-items: center;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.mobile{
+    width: 375px;
+    height: 100%;
+    padding: 30px 0px;
+}
+.device {
+    vertical-align: top;
+}
+.device, .device div, ::before, ::after {
+    -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.device {
+    width: 375px;
+    height: 100%;
+    background: #fdfdfd;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 36px 42px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 36px 42px;
+    border-radius: 30px;
+    margin: auto;
+}
+/* .device::before {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    position: absolute;
+    top: 5px;
+    content: '';
+    left: 5px;
+    border-radius: 61px;
+    background: #333333;
+    z-index: 1;
+} */
+.device {
+    display: inline-block;
+    position: relative;
+    -webkit-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 36px 42px;
+    max-height: 812px;
+    min-height: 300px;
+}
+
+
+.device .notch {
+    position: absolute;
+    width: 210px;
+    height: 30px;
+    top: 0;
+    left: calc(50% - 105px);
+    z-index: 999;
+    background: #333333;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+.device .notch::before {
+    background: radial-gradient(circle at bottom right, transparent 0, transparent 70%, #333333 70%, #333333 100%);
+    right: -8px;
+}
+.device .notch::before, .device .notch::after {
+    content: '';
+    height: 8px;
+    position: absolute;
+    top: 0;
+    width: 8px;
+}
+.device .camera {
+    width: 10px;
+    height: 10px;
+    top: 7px;
+    border-radius: 100%;
+    position: absolute;
+    left: 154px;
+    background: #474747;
+}
+.device .speaker {
+    height: 5px;
+    width: 60px;
+    left: 50%;
+    position: absolute;
+    top: 9px;
+    margin-left: -30px;
+    background: #474747;
+    border-radius: 6px;
+    margin-top: 1px;
+}
+
+.device .notch::after {
+    background: radial-gradient(circle at bottom left, transparent 0, transparent 70%, #333333 70%, #333333 100%);
+    left: -8px;
+}
+.device .notch::before, .device .notch::after {
+    content: '';
+    height: 12px;
+    position: absolute;
+    top: 9;
+    width: 12px;
+}
+
+.screen{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    z-index: 3;
+    background: white;
+    overflow: hidden;
+    display: block;
+    -webkit-box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.24);
+    border: 3px solid #20377d;
+    clip-path: inset(0px round 30px);
+    border-radius: 30px;
+    overflow: hidden;
+    position: absolute;
+    inset: 0px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    overflow: hidden;
+}
+.screen .content{
+    padding: 30px 0 2px;
+    position: relative;
+    height: 100%;
+}
+
+.screen::-webkit-scrollbar{
+    display: none!important;
+}
+
+@media(max-width: 500px){
+    .mobile{
+        width: 100%;
+        padding: 0px;
+    }
+    .device {
+        width: 100%;
+        border-radius: 0px;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        max-height: auto;
+    }
+    .device .notch {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .screen{
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-radius: 0px;
+        border: none;
+        clip-path: none;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .screen{
+        border: 0px!important;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    .screen{
+        border: 3px solid;
+    }
+}

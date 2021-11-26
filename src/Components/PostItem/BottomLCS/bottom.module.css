@@ -1,0 +1,112 @@
+i.LikeIcon{
+    background-position: 0px -254px; 
+}
+i.CommentIcon{
+    background-position: 0 -214px;
+}
+i.ShareIcon{
+    background-position: 0 -274px;
+}
+.Icon i{
+    background-size: 26px 634px;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.LikeCSWrapper{
+    width: 100%;
+}
+.LikeCSWrapper .Wrapper::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    background: #cdcdcd;
+    height: 1px;
+}
+.LikeCSWrapper .Wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+.LikeCSWrapper .Wrapper .Item {
+    width: 33.3%;
+    height: 100%;
+}
+.LikeCSWrapper .Wrapper .Item button{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+.LikeCSWrapper .Wrapper button .ItemWrapp {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.LikeCSWrapper .Wrapper button .ItemWrapp .Icon{
+    position: relative;
+    top: 3px;
+}
+.LikeCSWrapper .Wrapper button .text{
+    font-size: 14px;
+    text-transform: none;
+    color: #65676b;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+
+
+
+/* like comment details */
+.DetailsWrapper .Wrapper{
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.DetailsWrapper .Wrapper .Img{
+    width: 18px;
+    height: 18px;
+}
+.DetailsWrapper .Wrapper .Text{
+    color: #65676b;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: system-ui;
+}
+.DetailsWrapper .Wrapper .Reactions{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.DetailsWrapper .Wrapper .Text{
+    padding-left: 6px;
+}
+.DetailsWrapper .Wrapper .Img.HasNext{
+    border: 3px solid #fff;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+}
+.DetailsWrapper .Wrapper .Img.HasNext.First{
+    z-index: 3;
+}
+.DetailsWrapper .Wrapper .Img.HasNext.Second{
+    z-index: 2;
+}
+.DetailsWrapper .Wrapper .Img.HasPrev{
+    margin-left: -2px;
+}
+.DetailsWrapper .Wrapper .Img.HasPrev.HasNext{
+    margin-left: -4px;
+}

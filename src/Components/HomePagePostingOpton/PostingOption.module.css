@@ -1,0 +1,90 @@
+.Wrapper{
+    width: 100%;
+    background: #fff;
+}
+
+.Wrapper .top{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #bbbbbb;
+}
+.Wrapper .top .Avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+.Wrapper .top .Avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 1px solid rgb(193 193 193 / 59%);
+}
+.Wrapper .top .newPostButton {
+    width: calc(100% - 40px);
+    padding-left: 10px;
+}
+.Wrapper .top .newPostButton button{
+    width: 100%;
+    text-align: left!important;
+    justify-content: left;
+    text-transform: none;
+    height: 30px;
+    background: transparent;
+    padding-left: 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(193 193 193 / 59%);
+}
+
+
+
+
+/* bottom */
+.Wrapper .Bottom{
+    width: 100%;
+    height: 42px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bbbbbb;
+}
+.Wrapper .Bottom .Items{
+    width: 33.3%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+.Wrapper .Bottom .Items::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 1px;
+    height: 20px;
+    background: #bbbbbb;
+    margin-top: 4px;
+}
+.Wrapper .Bottom .Items:last-child::before{
+    content: none;
+}
+.Wrapper .Bottom .Items button{
+    width: 80%;
+    height: 100%;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.Wrapper .Bottom svg{
+    width: 22px;
+    height: 22px;
+}
+.Wrapper .Bottom button .Text{
+    position: relative;
+    margin-left: 6px;
+}
+
