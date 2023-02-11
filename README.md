@@ -1,5 +1,3 @@
-Demo : http://f.japansoftwaresolutions.com/
-
 
 # Getting Started with Create React App
 
