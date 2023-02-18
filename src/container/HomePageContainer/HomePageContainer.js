@@ -20,8 +20,9 @@ class HomePageContainer extends React.Component {
 
     if(posts) {
       if(posts.length > 0) {
-
-        HomePosts = posts.map((item, key) => {
+        
+          const shuffle = [...posts].sort(() => Math.random() - 0.5);
+          HomePosts = shuffle.map((item, key) => {
 
             return(
               <PostITem
